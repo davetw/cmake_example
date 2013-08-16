@@ -1,0 +1,52 @@
+This starter guide serves for users who merely want to build a program.
+I recommend to learn/try it as sequence below.
+
+variable
+____________________________________________________________________________
+	Shows how to manipulate cmake variable, and some useful default
+	variable of CMake. Also shows how to play with a list.
+
+
+message
+____________________________________________________________________________
+	Just like std::cout in C++ program, message() is a tool to print
+	information on screen. This example shows how message() explains
+	a variable or a list. Several Types of message() is another point
+	of this guide.
+
+
+single_file
+____________________________________________________________________________
+	This example give you a start to compiling program from single
+	source file.
+
+
+multiple_file
+____________________________________________________________________________
+	Almost the same with single_file, but compiling from multiple
+	source files.
+
+
+subdirectory
+____________________________________________________________________________
+	If you have huge amount of source file, you should consider
+	about classifing them to several folders. This example shows
+	how to compile static libraries under subdirectory and link
+	it with executable.
+
+
+link_and_include
+____________________________________________________________________________
+	There is a situation that you must use 3rd party libraries.
+	CMake can handle this situation well. before reading this
+	example, I suggest you to know the meaning of gcc arguments
+	"-I -L -l".
+
+
+preprocessor
+____________________________________________________________________________
+	Preprocessor is a powerful tool, especially when you are dealing
+	with a large project. This example gives you how to use
+	add_defination(). This example requires basic knowledge to
+	preprocessor.
+

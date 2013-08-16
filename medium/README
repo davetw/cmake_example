@@ -1,0 +1,71 @@
+Here lists some useful CMake commands.
+
+
+if
+____________________________________________________________________________
+	This is the most important command in CMake scripts. It can
+	do string or version comparison for us, and also checks the
+	existance of file or directory.
+
+
+sub_routime
+____________________________________________________________________________
+	This example mainly contains function, macro and foreach
+	commands. 
+
+
+file
+____________________________________________________________________________
+	Simple file operations like Read, Write, Append.
+
+
+string
+____________________________________________________________________________
+	String processing is another important command to learn.
+	For a script language, string processing is hard to avoid,
+	because almost everything in CMake can be expressed as
+	string. Regular expression comparison also gives helps to
+	advanced users.
+
+
+get_filename_component
+____________________________________________________________________________
+	Users may face a condition to get some infomation from a
+	file name, like getting directory of certain file or
+	getting extension from a file. CMake can handle this for you.
+
+
+test
+____________________________________________________________________________
+	Programer must write tests to assert the hehavior of the
+	program is correct.  This example shows how to create tests
+	for CTest. CTest will do all the tests for you and print
+	results in a highly readable format.
+
+
+
+find_package
+____________________________________________________________________________
+	Users usually needs external libraries and want to find out
+	where it exists.  For some popular libraries, you are not
+	necessary to write a finding script by yourself. CMake has
+	builtin Finding scripts for you. This example tells you how to
+	create a simple QT4 program with CMake.
+
+
+find_something
+____________________________________________________________________________
+	On configure stage, users often want to know whether a program
+	exists and where it is. CMake provides some handy FindXXX
+	commands for users. FindXXX commands returns the full name or
+	XXX-NOTFOUND if finds nothing. It is easy to check the existance
+	of necessary objects(programs, libraries, files and paths).
+
+
+execute_process
+____________________________________________________________________________
+	This command allows users to execute command from your shell.
+	Note that this example relies on find_program() command, users
+	are suggested to know find_program() before using this example.
+	Caution : Using commands from your shell may make dependency
+	to the commands, thus result a non-portable CMake script.

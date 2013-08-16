@@ -1,0 +1,28 @@
+please refer to basic/README, medium/README
+
+basic is what I think the minimum requirement to use CMake.
+medium is something you may not need in simple projects but necessary
+for complex ones.
+
+Useful websites:
+English:
+http://www.cmake.org/Wiki/CMake
+Chinese:
+http://zh.wikibooks.org/wiki/CMake_%E5%85%A5%E9%96%80
+
+
+The explnation of out-of-source build:
+http://www.cmake.org/Wiki/CMake_FAQ#What_is_an_.22out-of-source.22_build.3F
+
+Commands to run example:
+    cd /where/you/want/to/build
+    configure : cmake /where/source/dir
+    build : make
+    runtime : main.exe
+
+
+
+To check cmake manual:
+    man cmake
+  or
+    cmake --help-command xxx
