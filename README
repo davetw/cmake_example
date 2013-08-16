@@ -1,28 +1,66 @@
-please refer to basic/README, medium/README
-
-basic is what I think the minimum requirement to use CMake.
-medium is something you may not need in simple projects but necessary
-for complex ones.
-
-Useful websites:
-English:
-http://www.cmake.org/Wiki/CMake
-Chinese:
-http://zh.wikibooks.org/wiki/CMake_%E5%85%A5%E9%96%80
+Introduction
+_________________________________________________________________________
+	This examples wants to give users a quick view about what
+	CMake look like and what's the result of some CMake commands.
 
 
-The explnation of out-of-source build:
-http://www.cmake.org/Wiki/CMake_FAQ#What_is_an_.22out-of-source.22_build.3F
+What is CMake
+_________________________________________________________________________
+	CMake: The Cross Platform Build System :
+	http://clubjuggler.livejournal.com/138364.html?nojs=1
 
-Commands to run example:
-    cd /where/you/want/to/build
-    configure : cmake /where/source/dir
-    build : make
-    runtime : main.exe
+	Getting Start with CMake:
+	http://www.ogre3d.org/tikiwiki/Getting%20started%20with%20CMake
+
+
+How to use this CMake examples
+_________________________________________________________________________
+	please refer to basic/README, medium/README
+
+	basic is what I think the minimum requirement to use CMake.
+	medium is something you may not need in simple projects but necessary
+	for complex ones.
+
+
+How to install CMake
+_________________________________________________________________________
+	download page : http://www.cmake.org/cmake/resources/software.html
+	Debian-base Linux : apt-get install cmake
+	Red-Hat-base Linux : yum install cmake
+
+
+Useful Cmake Websites:
+_________________________________________________________________________
+	English:
+		http://www.cmake.org/Wiki/CMake
+	Simplied Chinese:
+		http://zh.wikibooks.org/wiki/CMake_%E5%85%A5%E9%96%80
+
+
+
+The explnation to out-of-source build
+_________________________________________________________________________
+	http://www.cmake.org/Wiki/CMake_FAQ#What_is_an_.22out-of-source.22_build.3F
+
+
+How to run example:
+_________________________________________________________________________
+	cd /where/you/want/to/build
+	configure : cmake /where/source/dir
+	build : make
+	runtime : main.exe
 
 
 
 To check cmake manual:
-    man cmake
-  or
-    cmake --help-command xxx
+_________________________________________________________________________
+	using "man cmake" when you are under linux. I think you may
+	want to check certain commands, then using "cmake --help-command xxx"
+
+	To view manual with web browser :
+	http://www.cmake.org/cmake/help/v2.8.11/cmake.html
+
+
+TODO
+_________________________________________________________________________
+	Give explanation to cache variables.
