@@ -4,8 +4,34 @@ _________________________________________________________________________
 	CMake look like and what's the result of some CMake commands.
 
 
+Requisite
+_________________________________________________________________________
+	1. Reading Readme.
+	2. Basic knowledge about Unix command line.
+	3. Unix-like OS. (TODO : make this portable to Window)
+	4. CMake 2.8
+	5. GNU C++ toolchain
+
+
 What is CMake
 _________________________________________________________________________
+	There are some stages for a program
+
+	1. configure stage :
+		Find and set up your toolchain, and clarify dependency
+		between sources files. In this example, is using CMake.
+		This stage should take less than a minute.
+
+	2. build stage :
+		Using compiler to compile object files and using linker
+		to link a executable. In this example, is using GMake
+		This stage may take more than 10 minutes for a large
+		project.
+
+	3. run stage :
+		Runing executables.
+
+
 	CMake: The Cross Platform Build System :
 	http://clubjuggler.livejournal.com/138364.html?nojs=1
 
@@ -43,7 +69,7 @@ _________________________________________________________________________
 	http://www.cmake.org/Wiki/CMake_FAQ#What_is_an_.22out-of-source.22_build.3F
 
 
-How to run example:
+How to run an example
 _________________________________________________________________________
 	cd /where/you/want/to/build
 	configure : cmake /where/source/dir
@@ -52,7 +78,7 @@ _________________________________________________________________________
 
 
 
-To check cmake manual:
+To check cmake manual
 _________________________________________________________________________
 	using "man cmake" when you are under linux. I think you may
 	want to check certain commands, then using "cmake --help-command xxx"
