@@ -8,10 +8,17 @@ ____________________________________________________________________________
 	existance of file or directory.
 
 
+loop
+____________________________________________________________________________
+	Shows how the use the foreach loops and whlie loops.
+
+
+
 sub_routime
 ____________________________________________________________________________
-	This example mainly contains function, macro and foreach
-	commands. 
+	This example mainly contains function, macro. Demostrate
+	how to create a function and the variable scope difference
+	between function and macro
 
 
 file

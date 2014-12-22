@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 2.8)
+message("for loop over each member of a list or lists.")
+set(list1 item0 item2 item3)
+foreach(loop_var item1 ${list1} item4)
+	message("\tloop_var : " ${loop_var})
+endforeach(loop_var)
+message("")
+
+message("while loop over each member of a list or lists.")
+list(LENGTH list1 list_len)
+set(index 0)
+while(index LESS ${list_len})
+	message("\tindex = " ${index})
+	list(GET list1 index while_var)
+	message("\twhile loop : " ${while_var})
+	# index++
+	math(EXPR index "${index}+1")
+endwhile()
