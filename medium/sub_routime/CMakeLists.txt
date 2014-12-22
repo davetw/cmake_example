@@ -3,23 +3,31 @@ cmake_minimum_required(VERSION 2.8)
 # To include another cmake scripts.
 include(included.cmake)
 
-# Function can view parent's variable scope, but changes made
-# here DOES NOT effect parent runtine. Define FCT_NAME() here.
+message("Function can view parent's variable scope, but changes made")
+message("here DOES NOT effect parent runtine. Define FCT_NAME() here.")
 set(fct_var invisible)
 function(FCT_NAME arg1 arg2)
 	set(fct_var visible)
 	message("here is the function")
 	message("\targ1 : " ${arg1})
 	message("\targ2 : " ${arg2})
+	message("\ttotal argument counts : " ${ARGC})
+	foreach(opt_arg ${ARGN})
+		message("\tadditional arguemnt : " ${opt_arg})
+	endforeach()
 endfunction(FCT_NAME)
 
-# Make a function call.
+message("Make a function call.")
 FCT_NAME(apple orange)
 message("\tfct_var is "${fct_var})
 message("")
 
-# Macro can view parent's variable scope, and changes made
-# here DOES effect parent runtine. Define MACRO_NAME() here.
+message("Make a function call with optional arguments.")
+FCT_NAME(apple orange apple banana)
+message("")
+
+message("Macro can view parent's variable scope, and variable assignment")
+message("made here DOES effect parent runtine. Define MACRO_NAME() here.")
 set(macro_var invisible)
 macro(MACRO_NAME arg1 arg2)
 	set(macro_var visible)
@@ -28,14 +36,24 @@ macro(MACRO_NAME arg1 arg2)
 	message("\targ2 : " ${arg2})
 endmacro(MACRO_NAME)
 
-# Make a macro call
+message("Make a macro call")
 MACRO_NAME(banana lemon)
 message("\tmacro_var is "${macro_var})
 message("")
 
-# Runs each member of a list or lists.
+message("for loop over each member of a list or lists.")
 set(list1 item0 item2 item3)
 foreach(loop_var item1 ${list1} item4)
-	message("loop_var : " ${loop_var})
+	message("\tloop_var : " ${loop_var})
 endforeach(loop_var)
 message("")
+
+message("while loop over each member of a list or lists.")
+list(LENGTH list1 list_len)
+set(index 0)
+while(index LESS ${list_len})
+	message("\tindex = " ${index})
+	list(GET list1 index while_var)
+	message("\twhile loop : " ${while_var})
+	math(EXPR index "${index}+1")
+endwhile()
