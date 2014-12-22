@@ -22,20 +22,20 @@ set(var3 orange)
 message("a variable in a variable")
 message("\tset(var2 var3)")
 message("\tset(var3 orange)")
-message("\t$" "{var2} = " ${VAR2})
+message("\t$" "{var2} = " ${var2})
 message("\t$" "{$" "{var2}} = " ${${var2}})
 message("")
 
 # Access to envirnment variable. read-only.
-message("print $PATH")
-message(\t$ENV{PATH})
+message("prints envirnment variable $PATH")
+message("\t$" "ENV{PATH} = " $ENV{PATH})
 message("")
 
 # Some built-in variables. For more info, please refer to :
 # http://www.cmake.org/Wiki/CMake_Useful_Variables
 message("print some built-in variables")
-message("\tbinary directory = " ${CMAKE_BINARY_DIR})
-message("\tsource directory = " ${CMAKE_SOURCE_DIR})
+message("\tbinary directory $" "{CMAKE_BINARY_DIR} = " ${CMAKE_BINARY_DIR})
+message("\tsource directory $" "{CMAKE_SOURCE_DIR} = " ${CMAKE_SOURCE_DIR})
 message("")
 message("the variable below have not been setted, but you can set it if needed")
 message("\tbuild type = " ${CMAKE_BUILD_TYPE})
@@ -43,35 +43,43 @@ message("\tc++ compiler = " ${CMAKE_CXX_COMPILER})
 message("\tc++ compiler flags = " ${CMAKE_CXX_FLAGS})
 message("")
 
-# The list in CMake is a string with semicolon to separate members.
 message("list operations")
-set(vec1 item1 item0 item2) # item1 is before item0
+message("\tThe list in CMake is a string with semicolon to separate members.")
+set(vec1 item0 item1 item2)
+message("\tset(vec1 item0 item1 item2)")
 message("\tvec1 = ${vec1}")
 message("")
 
 message("\tappend vec1 using set()")
 set(vec1 ${vec1} item3)
+message("\tset(vec1 $" "{vec1} item3)")
 message("\tvec1 = ${vec1}")
 message("")
 
 message("\tappend vec1 using list(APPEND)")
 list(APPEND vec1 item4)
+message("\tlist(APPEND vec1 item4)")
 message("\tvec1 = ${vec1}")
 message("")
 
 list(GET vec1 3 out)
+message("\tlist(GET vec1 3 out)")
 message("\tmember 3 of vec1 = " ${out})
 message("")
 
 list(LENGTH vec1 out2)
+message("\tlist(LENGTH vec1 out2)")
 message("\tlength of vec1 = " ${out2})
 message("")
 
 list(FIND vec1 "item4" out3)
+message("\tlist(FIND vec1 \"item4\" out3)")
 message("\tfind item4 of vec1 = " ${out3})
 list(FIND vec1 "item6" out4)
+message("\tlist(FIND vec1 \"item6\" out4)")
 message("\tfind item6 of vec1 = " ${out4})
 message("")
 
 list(SORT vec1)
+message("\tlist(SORT vec1)")
 message("\tsort(vec1) = ${vec1}")

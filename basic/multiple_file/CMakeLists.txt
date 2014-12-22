@@ -1,3 +1,5 @@
+# CMake force users to declare the project name and
+# the programming language
 project(hello_world_multi CXX)
 
 # Collect files with cpp suffix to SRC.

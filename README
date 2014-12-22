@@ -43,9 +43,9 @@ How to use this CMake examples
 _________________________________________________________________________
 	please refer to basic/README, medium/README
 
-	basic is what I think the minimum requirement to use CMake.
-	medium is something you may not need in simple projects but necessary
-	for complex ones.
+	basic/ is what I think the minimum requirement to use CMake.
+	medium/ is something you don't need in simple projects but
+	may be helpful for some complex projects.
 
 
 How to install CMake
